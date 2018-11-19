@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Flickity</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:400,700,800&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+
+      <style> .container {background-image: url("https://images.pexels.com/photos/547115/pexels-photo-547115.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+      background-size: cover;} </style>
+
+      <p class="link">
+        View:
+        <a href="#carousel-cell1">Cell 1</a>,
+        <a href="#carousel-cell2">Cell 2</a>,
+        <a href="#carousel-cell3">Cell 3</a>,
+        <a href="#carousel-cell4">Cell 4</a>,
+        <a href="#carousel-cell5">Cell 5</a>
+      </p>
+
+      <div class="main-carousel" data-flickity='{ "pageDots": false, "hash": true }'>
+        <div class="carousel-cell" id="carousel-cell1">
+          <div class="container">
+            <h1>Number 1</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-cell" id="carousel-cell2">
+          <div class="container">
+            <div class="button-group">
+              <button class="button"><a href="#carousel-cell1">Restart</a></button>
+            </div>
+            <h1>Number 2</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-cell" id="carousel-cell3">
+          <div class="container">
+            <div class="button-group">
+              <button class="button"><a href="#carousel-cell1">Restart</a></button>
+            </div>
+            <h1>Number 3</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-cell" id="carousel-cell4">
+          <div class="container">
+            <div class="button-group">
+              <button class="button"><a href="#carousel-cell1">Restart</a></button>
+            </div>
+            <h1>Number 4</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-cell" id="carousel-cell5">
+          <div class="container">
+            <div class="button-group">
+              <button class="button"><a href="#carousel-cell1">Restart</a></button>
+            </div>
+            <h1>Number 5</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <div class="progress-bar"></div>
+
+      <script src="vendor/flickity.pkgd.min.js"></script>
+      <script src="vendor/hash.js"></script>
+      <script  src="js/app.js"></script>
+    </body>
+</html>
