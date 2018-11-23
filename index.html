@@ -19,61 +19,7 @@
         <a href="#carousel-cell5">Cell 5</a>
       </p>
 
-      <div class="main-carousel" data-flickity='{ "pageDots": false, "hash": true }'>
-        <div class="carousel-cell" id="carousel-cell1">
-          <div class="container">
-            <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="city">
-            <div class="content">
-              <h1>Number 1</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-cell" id="carousel-cell2">
-          <div class="container">
-            <img src="https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="moon">
-            <div class="content">
-              <h1>Number 2</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-cell" id="carousel-cell3">
-          <div class="container">
-            <img src="https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="cat">
-            <div class="content">
-              <h1>Number 3</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-cell" id="carousel-cell4">
-          <div class="container">
-            <img src="https://images.pexels.com/photos/792668/pexels-photo-792668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="peak">
-            <div class="content">
-              <h1>Number 4</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-cell" id="carousel-cell5">
-          <div class="container">
-            <img src="https://images.pexels.com/photos/415229/pexels-photo-415229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="girl">
-            <div class="content">
-              <h1>Number 5</h1>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="main-carousel" data-flickity>
       </div>
 
       <div class="button-group">
@@ -82,8 +28,43 @@
 
       <div class="progress-bar"></div>
 
+      <script id="template_item" type="x-tmpl-mustache">
+        {{{ slides }}} {{{ description }}} {{{ title }}}
+      </script>
+
+      <script>
+        var slideList = [
+            {
+                image: 'Photo 1',
+                title: '<div class="content"><h1>Number 1</h1></div></div></div>',
+                description: '<div class="carousel-cell" id="carousel-cell1"><div class="container"><img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="city">'
+            },
+            {
+                image: 'Photo 2',
+                title: '<div class="content"><h1>Number 2</h1></div></div></div>',
+                description: '<div class="carousel-cell" id="carousel-cell2"><div class="container"><img src="https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="moon">'
+            },
+            {
+                image: 'Photo 3',
+                title: '<div class="content"><h1>Number 3</h1></div></div></div>',
+                description: '<div class="carousel-cell" id="carousel-cell3"><div class="container"><img src="https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="cat">'
+            },
+            {
+                image: 'Photo 4',
+                title: '<div class="content"><h1>Number 4</h1></div></div></div>',
+                description: '<div class="carousel-cell" id="carousel-cell4"><div class="container"><img src="https://images.pexels.com/photos/792668/pexels-photo-792668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="peak">'
+            },
+            {
+                image: 'Photo 5',
+                title: '<div class="content"><h1>Number 5</h1></div></div></div>',
+                description: '<div class="carousel-cell" id="carousel-cell5"><div class="container"><img src="https://images.pexels.com/photos/415229/pexels-photo-415229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="girl">'
+            },
+        ];
+      </script>
+
       <script src="vendor/flickity.pkgd.min.js"></script>
       <script src="vendor/hash.js"></script>
+      <script src="vendor/mustache.js"></script>
       <script  src="js/app.js"></script>
     </body>
 </html>
