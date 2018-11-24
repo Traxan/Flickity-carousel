@@ -109,4 +109,8 @@ a:hover {
   background-color: #000;
 }
 
+.flickity-page-dots {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
