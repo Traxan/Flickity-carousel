@@ -1,5 +1,4 @@
-'use strict';
-(function(){
+//Add slides from array
 
   var templateItem = document.getElementById('template_item').innerHTML;
 
@@ -16,8 +15,7 @@
   var results = document.querySelector('.main-carousel');
   results.insertAdjacentHTML('beforeend', fullSlidesList);
 
-})();
-
+//Carousel options
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
@@ -26,12 +24,16 @@ var flkty = new Flickity( elem, {
   hash: true
 });
 
+//Progress Bar
+
 var progressBar = document.querySelector('.progress-bar')
 
 flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+//Reset Button
 
 var buttonGroup = document.querySelector('.button-group');
 var buttons = buttonGroup.querySelectorAll('.button');
@@ -60,7 +62,9 @@ window.initMap = function () {
             position: slideList[i].coords,
             map: map
         });
+
+        marker.addListener('click', function(){
+          flkty.select(0);
+        });
     }
 }
-
-initMap();
