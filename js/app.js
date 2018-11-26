@@ -52,19 +52,22 @@ buttonGroup.addEventListener('click', function (event) {
 
 window.initMap = function () {
 
+    var markers = [];
     var map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 34.052368, lng: -118.247412 },
         zoom: 6
     });
 
     for (var i = 0; i < slideList.length; i++) {
-        var marker = new google.maps.Marker({
+            markers[i] = new google.maps.Marker({
             position: slideList[i].coords,
-            map: map
+            map: map,
+            id: i
         });
 
-        marker.addListener('click', function(){
-          flkty.select(0);
+        console.log(markers);
+        markers[i].addListener('click', function(){
+          flkty.select(this.id);
         });
     }
 }
