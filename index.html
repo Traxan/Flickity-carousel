@@ -24,39 +24,51 @@
       </div>
 
       <script id="template_item" type="x-tmpl-mustache">
-        {{{ slides }}} {{{ description }}} {{{ title }}}
+        <div class="carousel-cell" id="{{id}}">
+          <div class="container"><img src="{{image}}">
+            <div class="content">
+              <h1>{{title}}</h1>
+              {{{description}}}
+            </div>
+          </div>
+        </div>
       </script>
 
       <script>
         var slideList = [
             {
-                image: 'Photo 1',
-                title: '<div class="content"><h1>Number 1</h1></div></div></div>',
-                description: '<div class="carousel-cell" id="carousel-cell1"><div class="container"><img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="city">',
+                image: 'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'Number 1',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus in justo hendrerit ullamcorper quis vitae tellus. Sed augue augue, iaculis at ex a, ullamcorper posuere eros.</p>',
+                id: 'carousel-cell1',
                 coords: {lat: 34.052368, lng: -118.247412}
             },
             {
-                image: 'Photo 2',
-                title: '<div class="content"><h1>Number 2</h1></div></div></div>',
-                description: '<div class="carousel-cell" id="carousel-cell2"><div class="container"><img src="https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="moon">',
+                image: 'https://images.pexels.com/photos/748626/pexels-photo-748626.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'Number 2',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus in justo hendrerit ullamcorper quis vitae tellus. Sed augue augue, iaculis at ex a, ullamcorper posuere eros.</p>',
+                id: 'carousel-cell2',
                 coords: {lat: 42.777081, lng: 10.285333}
             },
             {
-                image: 'Photo 3',
-                title: '<div class="content"><h1>Number 3</h1></div></div></div>',
-                description: '<div class="carousel-cell" id="carousel-cell3"><div class="container"><img src="https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="cat">',
+                image: 'https://images.pexels.com/photos/248280/pexels-photo-248280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'Number 3',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus in justo hendrerit ullamcorper quis vitae tellus. Sed augue augue, iaculis at ex a, ullamcorper posuere eros.</p>',
+                id: 'carousel-cell3',
                 coords: {lat: 52.201693, lng: 21.019922}
             },
             {
-                image: 'Photo 4',
-                title: '<div class="content"><h1>Number 4</h1></div></div></div>',
-                description: '<div class="carousel-cell" id="carousel-cell4"><div class="container"><img src="https://images.pexels.com/photos/792668/pexels-photo-792668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="peak">',
+                image: 'https://images.pexels.com/photos/792668/pexels-photo-792668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'Number 4',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus in justo hendrerit ullamcorper quis vitae tellus. Sed augue augue, iaculis at ex a, ullamcorper posuere eros.</p>',
+                id: 'carousel-cell4',
                 coords: {lat: 28.172901, lng: 84.024687}
             },
             {
-                image: 'Photo 5',
-                title: '<div class="content"><h1>Number 5</h1></div></div></div>',
-                description: '<div class="carousel-cell" id="carousel-cell5"><div class="container"><img src="https://images.pexels.com/photos/415229/pexels-photo-415229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="girl">',
+                image: 'https://images.pexels.com/photos/415229/pexels-photo-415229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                title: 'Number 5',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit tellus in justo hendrerit ullamcorper quis vitae tellus. Sed augue augue, iaculis at ex a, ullamcorper posuere eros.</p>',
+                id: 'carousel-cell5',
                 coords: {lat: 42.438969, lng: 42.657085}
             },
         ];

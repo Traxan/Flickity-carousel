@@ -10,10 +10,8 @@
     listItems += Mustache.render(templateItem, slideList[i]);
   }
 
-  var fullSlidesList = Mustache.render(templateItem, {slides: listItems});
-
   var results = document.querySelector('.main-carousel');
-  results.insertAdjacentHTML('beforeend', fullSlidesList);
+  results.insertAdjacentHTML('beforeend', listItems);
 
 //Carousel options
 
@@ -64,10 +62,69 @@ window.initMap = function () {
             map: map,
             id: i
         });
-
-        console.log(markers);
         markers[i].addListener('click', function(){
           flkty.select(this.id);
         });
     }
+
+    flkty.on('change', function(index) {
+      smoothPanAndZoom(map, 4, slideList[index].coords)
+    });
+
 }
+// function for smooth moving of the map
+
+function smoothPanAndZoom (map, zoom, coords) {
+    
+    var jumpZoom = zoom - Math.abs(map.getZoom() - zoom);
+    jumpZoom = Math.min(jumpZoom, zoom -1);
+    jumpZoom = Math.max(jumpZoom, 3);
+
+    smoothZoom(map, jumpZoom, function(){
+        smoothPan(map, coords, function(){
+            smoothZoom(map, zoom); 
+        });
+    });
+};
+
+function smoothZoom (map, zoom, callback) {
+    var startingZoom = map.getZoom();
+    var steps = Math.abs(startingZoom - zoom);
+
+    if(!steps) {
+        if(callback) {
+            callback();
+        }
+        return;
+    }
+
+    var stepChange = - (startingZoom - zoom) / steps;
+
+    var i = 0;
+    var timer = window.setInterval(function(){
+        if(++i >= steps) {
+            window.clearInterval(timer);
+            if(callback) {
+                callback();
+            }
+        }
+        map.setZoom(Math.round(startingZoom + stepChange * i));
+    }, 80);
+};
+
+function smoothPan (map, coords, callback) {
+    var mapCenter = map.getCenter();
+    coords = new google.maps.LatLng(coords);
+
+    var steps = 12;
+    var panStep = {lat: (coords.lat() - mapCenter.lat()) / steps, lng: (coords.lng() - mapCenter.lng()) / steps};
+
+    var i = 0;
+    var timer = window.setInterval(function(){
+        if(++i >= steps) {
+            window.clearInterval(timer);
+            if(callback) callback();
+        }
+        map.panTo({lat: mapCenter.lat() + panStep.lat * i, lng: mapCenter.lng() + panStep.lng * i});
+    }, 1000/30);
+}; 
